@@ -14,5 +14,13 @@ namespace Task1_ConsoleApp
             int sum = Three + number;
             return sum;
         }
+
+        public static int AddFourAndThenMultiplyByThree(int number)
+        {
+
+            return 0;
+        }
     }
+
+
 }
