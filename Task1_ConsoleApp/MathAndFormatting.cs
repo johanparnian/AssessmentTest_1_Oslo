@@ -25,16 +25,44 @@ namespace Task1_ConsoleApp
             return sum;
         }
 
-        public static void TellRelationToTheNumber100(int number)
+        public static string PossiblyUppercaseAndDecorateText(string text, bool toUppercase, bool decorate)
+
         {
-            const int Hundred = 100;
-            string numberAsString = number.ToString();
-            Console.WriteLine(number);
+            if (toUppercase)
+            {
+                text = text.ToUpper();
+            }
 
+            if (decorate)
+            {
+                text = $"-:{text}:-";
+            }
 
+            return text;
         }
 
+        public static string TellRelationToTheNumber100(int number)
+        {
+            const int Hundred = 100;
+
+            if (number >= 0 && number <= 100)
+            {
+                int rest = Hundred - number;
+                return $"Add {rest} to {number} and you get 100";
+            }
+
+            else if (number < 0)
+            {
+                return $"{number} is a negative number";
+            }
+
+            else
+                return $"{number} is greater than 100";
+        }
+
+        public static string GetHamsterDescription(string name, bool isPet, HamsterSpecies hamsterSpecies)
+        {
+            return "";
+        }
     }
-
-
 }

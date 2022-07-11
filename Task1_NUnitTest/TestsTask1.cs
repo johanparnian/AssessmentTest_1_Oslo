@@ -30,6 +30,16 @@ namespace Task1_NUnitTest
             Assert.AreEqual(expected, result);
         }
 
+        [TestCase("aaa", true, true, "-:AAA:-")]
+        [TestCase("aaa", true, false, "AAA")]
+        [TestCase("aaa", false, true, "-:aaa:-")]
+        [TestCase("aaa", false, false, "aaa")]
+        public void TestCase_PossiblyUppercaseAndDecorateText(string text, bool toUppercase, bool decorate, string expected)
+        {
+            string result = MathAndFormatting.PossiblyUppercaseAndDecorateText(text, toUppercase, decorate);
+            Assert.AreEqual(expected, result);
+        }
+
 
         [TestCase(-5555, "-5555 is a negative number")]
         [TestCase(-1, "-1 is a negative number")]
@@ -44,14 +54,14 @@ namespace Task1_NUnitTest
             Assert.AreEqual(expected, result);
         }
 
-        //		[TestCase("Nemo", true, HamsterSpecies.Roborovski, "Nemo is a pet Roborovski hamster.")]
-        //		[TestCase("Kernel", false, HamsterSpecies.Syrian, "Kernel is a wild Syrian hamster.")]
-        //		public void TestCase_GetHamsterDescription(string name, bool isPet, HamsterSpecies hamsterSpecies, string expected)
-        //		{
-        //			Hamster hamster = new(name, isPet, hamsterSpecies);
-        //			string result = hamster.GetHamsterDescription();
+        [TestCase("Nemo", true, HamsterSpecies.Roborovski, "Nemo is a pet Roborovski hamster.")]
+        [TestCase("Kernel", false, HamsterSpecies.Syrian, "Kernel is a wild Syrian hamster.")]
+        public void TestCase_GetHamsterDescription(string name, bool isPet, HamsterSpecies hamsterSpecies, string expected)
+        {
+            Hamster hamster = new(name, isPet, hamsterSpecies);
+            string result = hamster.GetHamsterDescription();
 
-        //			Assert.AreEqual(expected, result);
-        //		}
+            Assert.AreEqual(expected, result);
+        }
     }
 }
