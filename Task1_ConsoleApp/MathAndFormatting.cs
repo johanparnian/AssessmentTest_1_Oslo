@@ -10,16 +10,30 @@ namespace Task1_ConsoleApp
     {
         public static int AddThree(int number)
         {
-            const int Three = 3;
-            int sum = Three + number;
+            const int PlusThree = 3;
+            int sum = PlusThree + number;
             return sum;
         }
 
         public static int AddFourAndThenMultiplyByThree(int number)
         {
-
-            return 0;
+            const int PlusFour = 4;
+            const int TimesThree = 3;
+            
+            
+            int sum = (PlusFour + number)*TimesThree;
+            return sum;
         }
+
+        public static void TellRelationToTheNumber100(int number)
+        {
+            const int Hundred = 100;
+            string numberAsString = number.ToString();
+            Console.WriteLine(number);
+
+
+        }
+
     }
 
 
