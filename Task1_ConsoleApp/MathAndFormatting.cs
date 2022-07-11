@@ -60,9 +60,6 @@ namespace Task1_ConsoleApp
                 return $"{number} is greater than 100";
         }
 
-        public static string GetHamsterDescription(string name, bool isPet, HamsterSpecies hamsterSpecies)
-        {
-            return "";
-        }
+
     }
 }
