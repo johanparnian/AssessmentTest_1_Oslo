@@ -59,7 +59,5 @@ namespace Task1_ConsoleApp
             else
                 return $"{number} is greater than 100";
         }
-
-
     }
 }

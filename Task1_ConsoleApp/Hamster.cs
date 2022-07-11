@@ -8,9 +8,22 @@ namespace Task1_ConsoleApp
 {
     public class Hamster
     {
-        public static string GetHamsterDescription(string name, bool isPet, HamsterSpecies hamsterSpecies)
+        public string Name { get; set; }
+        public bool IsPet { get; set; }
+        public HamsterSpecies HamsterSpecies { get; set; }
+
+        public Hamster (string name, bool isPet, HamsterSpecies hamsterSpecies)
         {
-            return "";
+            Name = name;
+            IsPet = isPet;
+            HamsterSpecies = hamsterSpecies;
         }
+
+        public string GetHamsterDescription()
+        {
+            return $"{Name} is a {(IsPet ? "pet" : "wild")} {HamsterSpecies} hamster.";
+        }
+
+        
     }
 }
