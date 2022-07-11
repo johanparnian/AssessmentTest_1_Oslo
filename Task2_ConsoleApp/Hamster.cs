@@ -9,9 +9,9 @@ namespace Task2_ConsoleApp
 {
     public class Hamster
     {
-        public string Name { get; set; }
+        public string Name { get; private set; }
         public bool IsPet { get; set; }
-        public HamsterSpecies HamsterSpecies { get; set; }
+        public HamsterSpecies HamsterSpecies { get; private set; }
         public List<string> FoodList { get; set; } = new();
         public Burrow Burrow { get; set; }
 
